@@ -1,0 +1,40 @@
+{
+  "name": "express-link",
+  "version": "1.0.0",
+  "main": "bin/express-link.js",
+  "module": "bin/express-link.esm.js",
+  "engine": {
+    "node": "9.2.1"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node example/server.js",
+    "test": "babel-node example/server.js",
+    "build": "rollup -c",
+    "watch": "rollup -c -w",
+    "dev": "rollup -c -w",
+    "testj": "jest",
+    "pretest": "npm run build"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "winston": "^2.4.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "jest": "^22.0.3",
+    "nodemon": "^1.14.12",
+    "rollup": "^0.50.0",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-uglify-es": "^0.0.1"
+  },
+  "files": [
+    "bin"
+  ]
+}
